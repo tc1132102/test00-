@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><meta http-equiv='Access-Control-Allow-Origin' content='*'><meta http-equiv='Access-Control-Allow-Credentials' content='true'><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/GameElements_20190131/gameelements.js'></script><link rel='stylesheet' href='https://fustyles.github.io/webduino/SpBlocklyJS/css/icon_custom.css' /><script src='https://fustyles.github.io/webduino/SpBlocklyJS/SpreadsheetSQL_20210403/spreadsheetsql.js'></script><script src='https://fustyles.github.io/webduino/SpBlocklyJS/SpreadsheetSQL_20210403/loader.js'></script></head><body>
+<script>
+const delay = (seconds) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve, seconds * 1000);
+    });
+};
+const main = async () => {
+    var i;
+
+    function spreadsheetsql_QueryResponse_(res) {
+        spreadsheetsql_QueryResponse(res, "");
+    }
+    window.spreadsheetsql_QueryResponse_ = spreadsheetsql_QueryResponse_;
+
+    async function spreadsheetsql_getDataFinish_(head_response, response) {
+        span_create('', 0, 100, 14, (spreadsheetsql_getCell(1, 1, "")), 999);
+
+    };
+    window.spreadsheetsql_getDataFinish_ = spreadsheetsql_getDataFinish_;
+
+
+    while (true) {
+        spreadsheet_insert("setcell", "", 2, 1, String(getDatetime(i, "datetime")), 'https://docs.google.com/spreadsheets/d/1MwkzaqTRjToMbVtNeqluas7vlJkpu3JvfeOZW8k31ak/edit?usp=sharing', 'input_sheet', "https://script.google.com/macros/s/AKfycbxA3hhTlntwVTOcqngOC_iJL_zLmRwzcDbMYDs7FD8iinNsY9XZsMkD7AcXTIUbEc33EA/exec");
+        spreadsheetsql_settings('1MwkzaqTRjToMbVtNeqluas7vlJkpu3JvfeOZW8k31ak', 'output_sheet', "");
+        spreadsheetsql_executeSql('select A  offset 0', "");
+        await delay(5);
+    }
+};
+main();
+</script>
+</body></html>
